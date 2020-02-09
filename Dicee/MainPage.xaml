@@ -8,7 +8,53 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Background="DarkSeaGreen">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock 
+                Foreground="White"
+                FontSize="40" 
+                Text="DICEE GAME"
+                HorizontalAlignment="Center"
+                Margin="100"
+                />
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Border Margin="20" Background="White" Height="150" Width="150" CornerRadius="15">
+                    <TextBlock x:Name="Dice1"
+                        Text="0"
+                        FontSize="50"
+                        Foreground="Black"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+                <Border Margin="20" Background="White" Height="150" Width="150" CornerRadius="15">
+                    <TextBlock x:Name="Dice2"
+                        Text="0"
+                        FontSize="50"
+                        Foreground="Black"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        />
+                </Border>
+            </StackPanel>
+            <Button
+                FontSize="20"
+                Content="Roll (Player 1)"
+                Margin="60"
+                HorizontalAlignment="Center" Click="Button_Click"
+            />
+            <StackPanel HorizontalAlignment="Center" Margin="40" Orientation="Horizontal">
+                <TextBlock x:Name="ScoreP1"
+                    Text="Score (Player 1):"
+                    Margin="30"
+                    FontSize="20"
+                    />
+                <TextBlock x:Name="ScoreP2"
+                    Text="Score (Player 2):"
+                    Margin="30"
+                    FontSize="20"
+                    />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
