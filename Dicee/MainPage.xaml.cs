@@ -22,7 +22,9 @@ namespace Dicee
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public bool P1Played = true;
+        public bool P1Turn = true;
+        int ScoreP1 = 0;
+        int ScoreP2 = 0;
         public MainPage()
         {
             this.InitializeComponent();
@@ -34,15 +36,21 @@ namespace Dicee
             Dice1.Text = $"{game.Roll()[0]}";
             Dice2.Text = $"{game.Roll()[1]}";
 
-            if (P1Played)
+            if (P1Turn)
             {
+                ScoreP1 += game.CaculateScore();
+                ScoreP1Text.Text = $"Score (Player 1): {ScoreP1}";
+
                 RollButton.Content = "Roll (Player 2)";
-                P1Played = false;
+                P1Turn = false;
             }
             else
             {
+                ScoreP2 += game.CaculateScore();
+                ScoreP2Text.Text = $"Score (Player 1): {ScoreP2}";
+
                 RollButton.Content = "Roll (Player 1)";
-                P1Played = true;
+                P1Turn = true;
             }
         }
     }

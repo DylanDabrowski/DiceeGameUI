@@ -44,12 +44,12 @@
                 HorizontalAlignment="Center" Click="Button_Click"
             />
             <StackPanel HorizontalAlignment="Center" Margin="40" Orientation="Horizontal">
-                <TextBlock x:Name="ScoreP1"
+                <TextBlock x:Name="ScoreP1Text"
                     Text="Score (Player 1): 0"
                     Margin="10"
                     FontSize="20"
                     />
-                <TextBlock x:Name="ScoreP2"
+                <TextBlock x:Name="ScoreP2Text"
                     Text="Score (Player 2):  0"
                     Margin="10"
                     FontSize="20"
