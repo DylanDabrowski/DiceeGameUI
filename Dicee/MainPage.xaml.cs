@@ -29,6 +29,9 @@ namespace Dicee
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Game game = new Game();
+            Dice1.Text = $"{game.Roll()[0]}";
+            Dice2.Text = $"{game.Roll()[1]}";
 
         }
     }
