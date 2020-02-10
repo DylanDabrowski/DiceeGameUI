@@ -39,6 +39,58 @@ namespace Dicee
             Game game = new Game();
             Dice1.Text = $"{game.Roll()[0]}";
             Dice2.Text = $"{game.Roll()[1]}";
+            turnNum++;
+
+            if (turnNum == 10)
+            {
+                if (ScoreP1 == ScoreP2) {
+                    Windows.UI.Popups.MessageDialog message = new Windows.UI.Popups.MessageDialog($"Tie game! With a score of {ScoreP1}");
+                    message.ShowAsync();
+                    P1Turn = false;
+                    ScoreP1 = 0;
+                    ScoreP2 = 0;
+                    P1jackpot = 0;
+                    P2jackpot = 0;
+                    RollButton.Content = "Roll (Player 1)";
+                    Dice1.Text = "0";
+                    Dice2.Text = "0";
+                    ScoreP1Text.Text = $"Score (Player 1): {ScoreP1}";
+                    ScoreP2Text.Text = $"Score (Player 2): {ScoreP2}";
+                    turnNum = 0;
+                }
+                else if (ScoreP1 > ScoreP2)
+                {
+                    Windows.UI.Popups.MessageDialog message = new Windows.UI.Popups.MessageDialog($"Player 1 Wins! With a score of {ScoreP1}");
+                    message.ShowAsync();
+                    P1Turn = false;
+                    ScoreP1 = 0;
+                    ScoreP2 = 0;
+                    P1jackpot = 0;
+                    P2jackpot = 0;
+                    RollButton.Content = "Roll (Player 1)";
+                    Dice1.Text = "0";
+                    Dice2.Text = "0";
+                    ScoreP1Text.Text = $"Score (Player 1): {ScoreP1}";
+                    ScoreP2Text.Text = $"Score (Player 2): {ScoreP2}";
+                    turnNum = 0;
+                }
+                else
+                {
+                    Windows.UI.Popups.MessageDialog message = new Windows.UI.Popups.MessageDialog($"Player 2 Wins! With a score of {ScoreP2}");
+                    message.ShowAsync();
+                    P1Turn = false;
+                    ScoreP1 = 0;
+                    ScoreP2 = 0;
+                    P1jackpot = 0;
+                    P2jackpot = 0;
+                    RollButton.Content = "Roll (Player 1)";
+                    Dice1.Text = "0";
+                    Dice2.Text = "0";
+                    ScoreP1Text.Text = $"Score (Player 1): {ScoreP1}";
+                    ScoreP2Text.Text = $"Score (Player 2): {ScoreP2}";
+                    turnNum = 0;
+                }
+            }
 
             if (P1Turn)
             {

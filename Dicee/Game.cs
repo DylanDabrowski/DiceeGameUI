@@ -12,15 +12,15 @@ namespace Dicee
 
         public List<int> Roll()
         {
-            numbers.Add(6); numbers.Add(6); return numbers;
+            //numbers.Add(6); numbers.Add(6); return numbers;
 
-            //Random randomNumberGenerator = new Random();
+            Random randomNumberGenerator = new Random();
 
-            //for (int i = 0; i < 2; i++)
-            //{
-            //    numbers.Add(randomNumberGenerator.Next(1, 7));
-            //}
-            //return numbers;
+            for (int i = 0; i < 2; i++)
+            {
+                numbers.Add(randomNumberGenerator.Next(1, 7));
+            }
+            return numbers;
         }
 
         public int CaculateScore(int jackpot)
