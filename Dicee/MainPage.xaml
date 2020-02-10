@@ -37,7 +37,7 @@
                         />
                 </Border>
             </StackPanel>
-            <Button
+            <Button x:Name="RollButton"
                 FontSize="20"
                 Content="Roll (Player 1)"
                 Margin="60"

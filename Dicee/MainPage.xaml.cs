@@ -22,6 +22,7 @@ namespace Dicee
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public bool P1Played = true;
         public MainPage()
         {
             this.InitializeComponent();
@@ -33,6 +34,16 @@ namespace Dicee
             Dice1.Text = $"{game.Roll()[0]}";
             Dice2.Text = $"{game.Roll()[1]}";
 
+            if (P1Played)
+            {
+                RollButton.Content = "Roll (Player 2)";
+                P1Played = false;
+            }
+            else
+            {
+                RollButton.Content = "Roll (Player 1)";
+                P1Played = true;
+            }
         }
     }
 }

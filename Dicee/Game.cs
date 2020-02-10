@@ -8,6 +8,19 @@ namespace Dicee
 {
     class Game
     {
+        //public bool p1Played = true;
+
+        //public string Turn()
+        //{
+        //    if (p1Played){
+        //        p1Played = false;
+        //        return "Roll (Player 2)";
+        //    }
+        //    else
+        //        return "Roll (Player 1)";
+
+        //}
+
         public List<int> Roll()
         {
             Random randomNumberGenerator = new Random();
